@@ -78,7 +78,13 @@ class BinarySearchTree {
         return node;
       }
 
-      return data < node.data ? search(node.left, data) : search(node.right, data);
+      if (data < node.data) {
+        return search(node.left, data)
+      } else {
+        return search(node.right, data)
+      }
+
+      
     }
 
     return search(this.rootTree , data);
